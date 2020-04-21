@@ -120,16 +120,18 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "The trick to making perfect guacamole is using ripe avocados that are just the right amount of ripeness. Not ripe enough and the avocado will be hard and tasteless. Too ripe and the taste will be off.\n" +
                 "\n" +
                 "Check for ripeness by gently pressing the outside of the avocado. If there is no give, the avocado is not ripe yet and will not taste good. If there is a little give, the avocado is ripe. If there is a lot of give, the avocado may be past ripe and not good. In this case, taste test first before using.");
-        guacNotes.setRecipe(guacRecipe);
+        //guacNotes.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNotes);
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("salt", new BigDecimal(".25"), teaSpoonUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient(" fresh lime juice or lemon juice", new BigDecimal(2), tableSpoonUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chiles, stems and seeds removed, minced", new BigDecimal(2), eachUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("freshly grated black pepper", new BigDecimal(1), dashUop, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUop, guacRecipe));
+       // guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUop));
+
+        guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUop));
+        guacRecipe.addIngredient(new Ingredient("salt", new BigDecimal(".25"), teaSpoonUop));
+        guacRecipe.addIngredient(new Ingredient(" fresh lime juice or lemon juice", new BigDecimal(2), tableSpoonUop));
+        guacRecipe.addIngredient(new Ingredient("minced red onion or thinly sliced green onion", new BigDecimal(2), tableSpoonUop));
+        guacRecipe.addIngredient(new Ingredient("serrano chiles, stems and seeds removed, minced", new BigDecimal(2), eachUop));
+        guacRecipe.addIngredient(new Ingredient("cilantro", new BigDecimal(2), tableSpoonUop));
+        guacRecipe.addIngredient(new Ingredient("freshly grated black pepper", new BigDecimal(1), dashUop));
+        guacRecipe.addIngredient(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUop));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
